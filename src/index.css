@@ -1,0 +1,31 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.navbar {
+
+    background-color: #050505;
+    color: white;
+    padding: 10px;
+}
+.navbar a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    padding: 10px;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
