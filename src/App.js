@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Provider, useSelector } from "react-redux";
 import { store } from "./redux/store";
 import Navbar from "./components/Navbar";
-import ExpandableRow from "./components/ExpandableRow";
-import MovieList from "./components/MovieList";
 
+import MovieList from "./components/MovieList";
+import { Register } from "./components/Register";
+import { Login } from "./components/Login";
 import furiosaImg from "./assets/images/furiosa.jpg";
 import monicaImg from "./assets/images/turmadamonica.jpg";
 import branquelasImg from "./assets/images/branquelas.jpg";
@@ -40,18 +41,6 @@ const filmesExemplo = [
   },
 ];
 
-function CadastroLogin() {
-  const rows = useSelector((state) => state.auth.rows);
-  return (
-    <div>
-      <h2>Cadastro/Login</h2>
-      {rows.map((row) => (
-        <ExpandableRow key={row.id} row={row} />
-      ))}
-    </div>
-  );
-}
-
 function App() {
   return (
     <Provider store={store}>
@@ -59,8 +48,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<MovieList filmes={filmesExemplo} />} />
-          <Route path="/filmes/:genre" element={<h1>Filmes por Gênero</h1>} />
-          <Route path="/cadastro" element={<CadastroLogin />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/cadastro" element={<Register />} />
         </Routes>
       </Router>
     </Provider>

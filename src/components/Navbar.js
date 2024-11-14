@@ -13,7 +13,8 @@ const Navbar = () => (
         <Link to="/filmes/terror">Terror</Link>
       </div>
     </div>
-    <Link to="/cadastro">Cadastro/Login</Link>
+    <Link to="/cadastro">Cadastro</Link>
+    <Link to="/login">Login</Link>
   </nav>
 );
 
