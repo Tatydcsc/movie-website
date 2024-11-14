@@ -12,6 +12,7 @@ import monicaImg from "./assets/images/turmadamonica.jpg";
 import branquelasImg from "./assets/images/branquelas.jpg";
 import americaImg from "./assets/images/captaoamerica.jpg";
 import coragemImg from "./assets/images/homensdecoragem.jpg";
+import { Movie } from "./components/Movie";
 
 const filmesExemplo = [
   {
@@ -48,6 +49,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<MovieList filmes={filmesExemplo} />} />
+          <Route path="/filmes" element={<Movie />} />
           <Route path="/login" element={<Login />} />
           <Route path="/cadastro" element={<Register />} />
         </Routes>
