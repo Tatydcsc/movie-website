@@ -1,6 +1,6 @@
 import React from "react";
 
-const MovieList = ({ filmes }) => {
+export const MovieList = ({ filmes }) => {
   return (
     <div>
       <h2>Filmes em destaque </h2>
@@ -20,5 +20,3 @@ const MovieList = ({ filmes }) => {
     </div>
   );
 };
-
-export default MovieList;

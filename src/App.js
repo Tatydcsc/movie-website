@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Provider, useSelector } from "react-redux";
 import { store } from "./redux/store";
-import Navbar from "./components/Navbar";
+import { Navbar } from "./components/Navbar";
 
-import MovieList from "./components/MovieList";
+import { MovieList } from "./components/MovieList";
 import { Register } from "./components/Register";
 import { Login } from "./components/Login";
 import furiosaImg from "./assets/images/furiosa.jpg";
