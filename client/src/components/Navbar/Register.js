@@ -1,9 +1,18 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
+import Axios from "axios";
 
 export const Register = () => {
-  const handleClickRegister = (values) => console.log(values);
+  const handleClickRegister = (values) => {
+    Axios.post("http://localhost:3001/register", {
+      nome: values.nome,
+      email: values.email,
+      password: values.password,
+    }).then((response) => {
+      console.log(response);
+    });
+  };
   const validationRegister = yup.object().shape({
     nome: yup.string().required("Este campo é obrigatório"),
     email: yup

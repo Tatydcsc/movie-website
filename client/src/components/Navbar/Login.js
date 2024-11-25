@@ -1,9 +1,17 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
+import Axios from "axios";
 
 export const Login = () => {
-  const handleClickLogin = (values) => console.log(values);
+  const handleClickLogin = (values) => {
+    Axios.post("http://localhost:3001/login", {
+      email: values.email,
+      password: values.password,
+    }).then((response) => {
+      console.log(response);
+    });
+  };
   const validationLogin = yup.object().shape({
     email: yup
       .string()
